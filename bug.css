@@ -1,0 +1,21 @@
+The following CSS code snippet demonstrates an uncommon error related to specificity and inheritance:
+
+```css
+div {
+  color: blue;
+}
+
+.container div {
+  color: red;
+}
+
+.container p {
+  color: green;
+}
+
+.container p span {
+  color: purple;
+}
+```
+
+In this example, the `p span` selector is more specific than `.container div`, leading to the `span` element inheriting the `color` from the `p` element instead of inheriting from the parent `div`. This unexpected inheritance can lead to unexpected colors and styling issues.
