@@ -1,0 +1,23 @@
+To solve this issue, the color of the `div` within `.container` should be explicitly specified:
+
+```css
+div {
+  color: blue;
+}
+
+.container div {
+  color: red !important;
+}
+
+.container p {
+  color: green;
+}
+
+.container p span {
+  color: purple;
+}
+```
+
+Using `!important` ensures that the `color: red` declaration overrides the inheritance from the less specific `div` selector.  However, using `!important` should be done sparingly.
+
+Alternatively, increase the specificity of the `div` selector within `.container` to override the inheritance by adding an extra class or id to the `div` element if using !important is undesirable.
